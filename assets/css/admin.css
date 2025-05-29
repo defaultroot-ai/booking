@@ -1,0 +1,327 @@
+/* Advanced Booking System - Admin Styles */
+
+.abs-admin {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dashboard Stats */
+.abs-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.abs-stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #007cba;
+    text-align: center;
+}
+
+.abs-stat-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.abs-stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #007cba;
+    margin: 0;
+}
+
+/* Dashboard Content */
+.abs-dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.abs-recent-bookings,
+.abs-quick-actions {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.abs-recent-bookings h2,
+.abs-quick-actions h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.abs-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.abs-action-buttons .button {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* Status indicators */
+.abs-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.abs-status-active,
+.abs-status-confirmed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.abs-status-inactive,
+.abs-status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.abs-status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.abs-status-completed {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Filters */
+.abs-filters {
+    background: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.abs-filters form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.abs-filters select,
+.abs-filters input[type="date"] {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Table improvements */
+.wp-list-table.abs-table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wp-list-table.abs-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.wp-list-table.abs-table td {
+    vertical-align: middle;
+}
+
+/* Form styling */
+.abs-admin .form-table th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+}
+
+.abs-admin .form-table td {
+    padding: 15px 10px;
+}
+
+.abs-admin .regular-text,
+.abs-admin .large-text {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.abs-admin .regular-text:focus,
+.abs-admin .large-text:focus {
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0,124,186,0.1);
+    outline: none;
+}
+
+/* Buttons */
+.abs-admin .button-primary {
+    background: #007cba;
+    border-color: #007cba;
+    box-shadow: 0 1px 0 #005a87;
+}
+
+.abs-admin .button-primary:hover {
+    background: #005a87;
+    border-color: #005a87;
+}
+
+.abs-admin .page-title-action {
+    background: #007cba;
+    color: white;
+    border-color: #007cba;
+}
+
+.abs-admin .page-title-action:hover {
+    background: #005a87;
+    color: white;
+    border-color: #005a87;
+}
+
+/* Status select styling */
+.abs-status-select {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Delete buttons */
+.abs-delete-service,
+.abs-delete-staff,
+.abs-delete-booking {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.abs-delete-service:hover,
+.abs-delete-staff:hover,
+.abs-delete-booking:hover {
+    background: #c82333;
+    color: white;
+    border-color: #bd2130;
+}
+
+/* Messages */
+.abs-admin .notice {
+    margin: 20px 0;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .abs-dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .abs-dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .abs-filters form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .abs-action-buttons {
+        flex-direction: column;
+    }
+    
+    .wp-list-table {
+        font-size: 12px;
+    }
+    
+    .wp-list-table th,
+    .wp-list-table td {
+        padding: 8px 4px;
+    }
+}
+
+/* Loading states */
+.abs-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.abs-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Calendar widget styling */
+.abs-calendar-widget {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.abs-calendar-widget h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Settings page styling */
+.abs-settings-section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.abs-settings-section h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Success/Error messages */
+.abs-success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #c3e6cb;
+    margin: 15px 0;
+}
+
+.abs-error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    margin: 15px 0;
+}
